@@ -4,9 +4,7 @@ public class SafeLazySingleton {
     private static SafeLazySingleton instance = null;
 
     private SafeLazySingleton() {
-        if (instance != null){
-            throw  new RuntimeException("单例已存在，不允许重新创建");
-        }
+
     }
 
     public static SafeLazySingleton getInstance() {
@@ -19,4 +17,5 @@ public class SafeLazySingleton {
         }
         return instance;
     }
+
 }
