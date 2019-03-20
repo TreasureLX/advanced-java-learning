@@ -10,5 +10,11 @@ public class PrototypeTest {
         //Cloneable是浅克隆
         User jdk= (User) user.clone();
         System.out.println(jdk.getHobby() == user.getHobby());
+        //深克隆
+        User user2=new User();
+        User user3=(User) user2.deepClone();
+        System.out.println( user2 == user3 );
+        System.out.println( user2.getHobby() == user3.getHobby());
+        user2.getHobby().add(1);
     }
 }

@@ -17,7 +17,8 @@ public class Test {
 
     public static void main(String[] args) {
         byte[] data=new byte[]{1,1,2,3};
-        Message warnMessage=SimpleMessageFactory.createMessage(messages.get(String.valueOf(data[0])));
+        SimpleMessageFactory factory=new SimpleMessageFactory();
+        Message warnMessage=factory.createMessage(messages.get(String.valueOf(data[0])));
         warnMessage.decode(data);
         System.out.println(warnMessage.toString());
     }

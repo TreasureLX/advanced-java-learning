@@ -4,7 +4,7 @@ import com.lx.learning.designpattern.factory.common.Message;
 
 public class SimpleMessageFactory {
 
-    public static Message createMessage(Class clazz) {
+    public Message createMessage(Class clazz) {
         try {
             Message message= (Message) clazz.newInstance();
             return message;
