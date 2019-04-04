@@ -11,8 +11,19 @@ public class ExecutorsDemo {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(10*1000);
-                        System.out.println("hello");
+//                        Thread.sleep(10*1000);
+                        System.out.println("hello1");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            executorService.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+//                        Thread.sleep(10*1000);
+                        System.out.println("hello2");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -23,7 +34,7 @@ public class ExecutorsDemo {
                 public void run() {
                     try {
 
-                        System.out.println("hello2");
+                        System.out.println("hello3");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -32,5 +43,7 @@ public class ExecutorsDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 }
