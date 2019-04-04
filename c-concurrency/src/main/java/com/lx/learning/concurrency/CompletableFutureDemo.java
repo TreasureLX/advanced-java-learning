@@ -11,28 +11,20 @@ public class CompletableFutureDemo {
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(10*1000);
+
                         System.out.println("hello");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        System.out.println("hello2");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
             });
+            Thread.sleep(10*1000);
             executorService.execute(new Runnable() {
                 @Override
                 public void run() {
                     try {
-                        System.out.println("hello3");
+
+                        System.out.println("hello2");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
