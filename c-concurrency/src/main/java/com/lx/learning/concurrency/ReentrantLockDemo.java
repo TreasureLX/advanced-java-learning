@@ -8,12 +8,33 @@ public class ReentrantLockDemo {
     static ReentrantLock lock=new ReentrantLock();
     static Condition condition1=lock.newCondition();
     public static void main(String[] args) throws InterruptedException {
+//        lock.lock();
+        //Condition必须在加锁后使用
+//        condition1.await();
+//        condition1.signal();
+//        lock.unlock();
+//        tryLockInTimeOut();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    lock.lock();
+                    condition1.await();
+                    Thread.sleep(5 * 1000);
+                    lock.unlock();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+        Thread.sleep(1 * 1000);
         lock.lock();
         //Condition必须在加锁后使用
-        condition1.await();
+        condition1.signal();
         condition1.signal();
         lock.unlock();
-//        tryLockInTimeOut();
+
     }
 
     private static void tryLockInTimeOut(){
