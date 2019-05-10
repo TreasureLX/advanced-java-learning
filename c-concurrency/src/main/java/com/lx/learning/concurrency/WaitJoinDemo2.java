@@ -1,6 +1,6 @@
 package com.lx.learning.concurrency;
 
-public class WaitJoinDemo {
+public class WaitJoinDemo2 {
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(() -> {
             System.out.println("Hello world1");
@@ -15,20 +15,14 @@ public class WaitJoinDemo {
         t2.start();
         t3.start();
         while (t.isAlive()) {
-            synchronized (t){
-                t.wait(0);
-            }
+            Thread.sleep(0);
         }
 
         while (t2.isAlive()) {
-            synchronized (t2) {
-                t2.wait(0);
-            }
+            Thread.sleep(0);
         }
         while (t3.isAlive()) {
-            synchronized (t3){
-                t3.wait(0);
-            }
+            Thread.sleep(0);
         }
         System.out.println("执行完毕");
     }
