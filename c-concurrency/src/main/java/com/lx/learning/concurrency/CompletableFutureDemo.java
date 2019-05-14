@@ -1,5 +1,6 @@
 package com.lx.learning.concurrency;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -44,5 +45,7 @@ public class CompletableFutureDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 }
