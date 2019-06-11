@@ -12,6 +12,7 @@
         <module>a-design-pattern</module>
         <module>b-collections</module>
         <module>c-concurrency</module>
+        <module>d-jvm</module>
     </modules>
 
 
