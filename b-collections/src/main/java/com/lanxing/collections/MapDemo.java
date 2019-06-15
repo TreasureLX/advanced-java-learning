@@ -7,6 +7,11 @@ public class MapDemo {
         Map<String,Object> map=new HashMap<>();
         map.put("a","tttt");
         map.put("b","eeee");
+
+        Set<Map.Entry<String,Object>> entries=map.entrySet();
+        for (Map.Entry<String,Object> entry:entries) {
+            System.out.println(entry.getKey());
+        }
         HashSet<String> strings=new HashSet<>();
         TreeSet<String> treeSet=new TreeSet<>();
 
