@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author lanxing
+ */
 public class ImmutableArrayDemo {
     public static void main(String[] args) {
         //singletonList的使用，只包含一个元素
