@@ -14,6 +14,7 @@ public class ListRemoveDemo {
             String str=iterator.next().toString();
             System.out.println(str);
             iterator.remove();
+//            list.add("test");
         }
 
         for (String str: list) {
