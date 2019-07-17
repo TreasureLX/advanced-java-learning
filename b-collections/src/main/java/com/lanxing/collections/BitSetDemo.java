@@ -1,7 +1,5 @@
 package com.lanxing.collections;
 
-import java.util.BitSet;
-
 /**
  * @author lanxing
  */
